@@ -32,6 +32,7 @@
 	},
 	"dependencies": {
 		"@lucide/svelte": "^0.503.0",
+		"@sveltejs/adapter-static": "^3.0.8",
 		"three": "^0.176.0"
 	}
 }
