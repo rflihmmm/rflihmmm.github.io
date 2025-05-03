@@ -1,12 +1,13 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static'
 
 const config = {
-	kit: {
-		adapter: adapter(),
-		alias: {
-			'@/*': './path/to/lib/*'
-		}
-	}
-};
+  kit: {
+    adapter: adapter(),
+    alias: {
+      '@/*': './path/to/lib/*'
+    },
+    base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+  }
+}
 
-export default config;
+export default config
