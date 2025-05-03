@@ -5,10 +5,10 @@
 	let { children } = $props();
 
 	const navItems = [
-		{ label: "Home", href: "/" },
 		{ label: "About", href: "/about" },
-		{ label: "Services", href: "/services" },
-		{ label: "Contact", href: "/contact" }
+		{ label: "Projects", href: "/projects" },
+		{ label: "Contact", href: "/contact" },
+		{ label: "Resume", href: "#" }
 	];
 </script>
 
@@ -25,6 +25,8 @@
 <Drawer {items}>
 	{#snippet content()}
 		<Navbar {title} {items} />
-		{@render children()}
+		<main class="pt-16 min-h-screen">
+			{@render children()}
+		</main>
 	{/snippet}
 </Drawer>
